@@ -106,6 +106,7 @@ paragraphs[8].textContent = siteContent["footer"]["copyright"];
 //CONTACT 
 
 //FOOTER
+titles.forEach( colored => colored.style.color = "teal");
 
-
+awesome.style.backgroundColor = "green";
 
