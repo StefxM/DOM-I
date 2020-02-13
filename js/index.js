@@ -37,6 +37,44 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// Example: Update the img src for the logo / GREAT IDEA PIC
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// NAV BAR TO THE LEFT
+/*let links = document.querySelectorAll('nav');
+Array.from(links).forEach(link => {
+  link.style.color = 'green';
+})*/
+
+
+// ROUND PIC INSERT
+let roundPic = document.getElementById("cta-img");
+roundPic.setAttribute('src', siteContent["cta"]["img-src"])
+
+//STACK THE H1
+
+//TEXT FOR THE BUTTON
+
+//BORDER-------------------------------------
+
+//TWO COLUMNS OF TEXT
+
+//BORDERPIC INSERT
+let middlePic = document.getElementById("middle-img");
+middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//THREE COLUMNS OF TEXT
+
+//BORDER--------------------------------------------
+
+//CONTACT 
+
+//FOOTER
+
+
+
+/*const greenText = document.querySelectorAll('a');
+greenText.forEach( text => {
+  text.style.color = 'green';
+})
+*/
