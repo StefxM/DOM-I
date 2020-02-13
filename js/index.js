@@ -41,10 +41,27 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 // NAV BAR TO THE LEFT
-/*let links = document.querySelectorAll('nav');
-Array.from(links).forEach(link => {
-  link.style.color = 'green';
-})*/
+let links = document.querySelectorAll('a'); //anchor tag since you are changing the placeholder and not the nav object
+  links[0].textContent = siteContent["nav"]["nav-item-1"];
+  links[1].textContent = siteContent["nav"]["nav-item-2"];
+  links[2].textContent = siteContent["nav"]["nav-item-3"];
+  links[3].textContent = siteContent["nav"]["nav-item-4"];
+  links[4].textContent = siteContent["nav"]["nav-item-5"];
+  links[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let additions = document.createElement("a"); // put in whatever you are creating
+additions.textContent = "heyyyy"
+additions.setAttribute('href', "#");
+let header1 = document.querySelector('nav'); // pulling the nav bar to attatch the prepend/append
+header1.prepend(additions); //
+
+let additions1 = document.createElement("a");
+additions1.textContent = "byeeee"
+additions1.setAttribute('href', "#");
+header1.append(additions1);
+
+  links.forEach(navlinks => navlinks.style.color = 'green');
+
 
 
 // ROUND PIC INSERT
@@ -52,18 +69,37 @@ let roundPic = document.getElementById("cta-img");
 roundPic.setAttribute('src', siteContent["cta"]["img-src"])
 
 //STACK THE H1
+let awesome = document.querySelector('h1');
+awesome.textContent = siteContent["cta"]['h1'];
 
 //TEXT FOR THE BUTTON
-
+let buttonText = document.querySelector('button');
+buttonText.textContent = siteContent["cta"]["button"];
 //BORDER-------------------------------------
-
-//TWO COLUMNS OF TEXT
 
 //BORDERPIC INSERT
 let middlePic = document.getElementById("middle-img");
 middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-//THREE COLUMNS OF TEXT
+//Titles
+let titles = document.querySelectorAll("h4"); // grouped all the h4s together to change with textcontent 
+titles[0].textContent = siteContent['main-content']['features-h4'];
+titles[1].textContent = siteContent['main-content']['about-h4'];
+titles[2].textContent = siteContent['main-content']['services-h4'];
+titles[3].textContent = siteContent['main-content']['product-h4'];
+titles[4].textContent = siteContent['main-content']['vision-h4'];
+titles[5].textContent = siteContent['contact']['contact-h4'];
+//paragraphs
+let paragraphs = document.querySelectorAll("p"); // 
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+paragraphs[5].textContent = siteContent["contact"]["address"];
+paragraphs[6].textContent = siteContent["contact"]["phone"];
+paragraphs[7].textContent = siteContent["contact"]["email"];
+paragraphs[8].textContent = siteContent["footer"]["copyright"];
 
 //BORDER--------------------------------------------
 
@@ -73,8 +109,3 @@ middlePic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 
-/*const greenText = document.querySelectorAll('a');
-greenText.forEach( text => {
-  text.style.color = 'green';
-})
-*/
